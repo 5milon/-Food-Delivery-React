@@ -1,11 +1,21 @@
-import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import { Route, Routes } from "react-router-dom";
+import "./App.css";
+
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 
+import {
+  createBrowserRouter,
+  Route,
+  Routes,
+  Links,
+  RouterProvider,
+} from "react-router-dom";
+
 const App = () => {
+ 
+
   return (
     <>
       <div className="app">
@@ -13,8 +23,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/cart" element ={<Cart/>}/>
-          <Route path="/placeorder" element = {<PlaceOrder/>}/>
+          <Route path="/order" element = {<PlaceOrder/>}/>
         </Routes>
+    
       </div>
     </>
   );
